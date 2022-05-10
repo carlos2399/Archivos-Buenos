@@ -74,7 +74,9 @@ class MoveGroupPythonInterfaceTutorial(object):
         joint_goal[3] = pi / 2
         joint_goal[4] = -pi / 6
         joint_goal[5] = pi / 3 
-
+	
+	print("La posicion objetivo es: ",joint_goal)
+	
 	# Con el siguiente comando mandamos al robot ir a la posicion indicada
         move_group.go(joint_goal, wait=True)
 
@@ -93,6 +95,8 @@ class MoveGroupPythonInterfaceTutorial(object):
         joint_goal[4] = pi / 2
         joint_goal[5] = -pi / 6
 
+	print("La posicion objetivo es: ",joint_goal)
+
         move_group.go(joint_goal, wait=True)
        
         move_group.stop()
@@ -108,6 +112,8 @@ class MoveGroupPythonInterfaceTutorial(object):
         joint_goal[3] = 0
         joint_goal[4] = 0
         joint_goal[5] = 0 
+
+	print("La posicion objetivo es: ",joint_goal)
 
         move_group.go(joint_goal, wait=True)
        
@@ -127,19 +133,20 @@ def main():
 
 		input("")
 		robot_state.go_to_joint_state()
+		print("")
 
 		input("============  Movimiento completado, pulsa ENTER para el siguiente movimiento o CTRL+D para salir del programa")
+		print("")
 		robot_state.go_to_joint_state_2()
 
 		print("")
 		print("============ Movimiento completado, pulsa ENTER para el siguiente movimiento o CTRL+D para salir del programa")
-		print("")
 
-		input("============  Movimiento completado, pulsa ENTER para el siguiente movimiento o CTRL+D para salir del programa")
+		input("")
 		robot_state.go_to_joint_state_3()
 
 		print("")
-		print("============ Movimiento completado, pulsa ENTER para el siguiente movimiento o CTRL+D para salir del programa")
+		print("============ Movimiento completado, pulsa ENTER repetir los movimientos o CTRL+D para salir del programa")
 		print("")
 
 
